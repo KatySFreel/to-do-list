@@ -1,4 +1,39 @@
 * {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	color: rgb(9, 13, 41);
+	box-sizing: border-box;
 }
+body {
+	background-color: rgb(244, 250, 255);
+	font-size: 20px;
+}
+input {outline:none;}
+.wrapper {
+	margin: 0 auto;
+	width: 1200px;
+	text-align: center;
+}
+.offer__btn {
+	border-radius: 50px;
+	background-color: rgb(153, 153, 255, 0.5);
+	width: 120px;
+	padding: 9px;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: all .5s ease-out;
+}
+.offer__btn:hover {
+	background-color: rgb(153, 153, 255);
+	cursor: pointer;
+}
+.offer__input {
+	width: 200px;
+	height: 33px;
+	padding: 5px;
+	border-radius: 50px;
+	border: 1px solid rgb(153, 153, 255, 0.5);
+}
+
+
