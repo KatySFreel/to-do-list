@@ -8,11 +8,26 @@ body {
 	background-color: rgb(244, 250, 255);
 	font-size: 20px;
 }
+h1 {
+	letter-spacing: 5px;
+	margin-bottom: 15px;
+}
 input {outline:none;}
 .wrapper {
 	margin: 0 auto;
 	width: 1200px;
 	text-align: center;
+}
+.offer {
+	width: 350px;
+	padding: 10px 0;
+	border-radius: 50px;
+	background-color: rgb(214 214 245 / 61%);
+	margin-bottom: 20px;
+}
+.offer__wrapper {
+	display: flex;
+	align-items: center;
 }
 .offer__btn {
 	border-radius: 50px;
@@ -23,6 +38,7 @@ input {outline:none;}
 	text-transform: uppercase;
 	font-weight: 700;
 	transition: all .5s ease-out;
+	letter-spacing: 1.2px;
 }
 .offer__btn:hover {
 	background-color: rgb(153, 153, 255);
@@ -31,9 +47,15 @@ input {outline:none;}
 .offer__input {
 	width: 200px;
 	height: 33px;
-	padding: 5px;
+	padding: 5px 10px;
+	font-size: 16px;
 	border-radius: 50px;
 	border: 1px solid rgb(153, 153, 255, 0.5);
+}
+h2 {
+	text-transform: uppercase;
+	font-size: 22px;
+	letter-spacing: 5px;
 }
 
 
