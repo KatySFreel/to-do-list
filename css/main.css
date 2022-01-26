@@ -1,10 +1,11 @@
 body {
-	background-color: rgb(244, 250, 255);
+	background-color: rgb(222 231 255);
 	font-size: 20px;
 	margin: 0 auto;
 	padding: 0;
 	color: rgb(9, 13, 41);
 	box-sizing: border-box;
+	font-family: 'Nunito Sans';
 }
 h1 {
 	letter-spacing: 5px;
@@ -12,26 +13,32 @@ h1 {
 }
 input {outline:none;}
 .wrapper {
+	padding: 0 15px;
 	margin: 0 auto;
 	text-align: center;
 }
 .offer {
-	width: 350px;
+	max-width: 380px;
 	padding: 10px 0;
 	margin: 0 auto;
 	border-radius: 50px;
-	background-color: rgb(214 214 245 / 61%);
+	background-color: rgba(255, 255, 255);
 	margin-bottom: 20px;
+	transition: all .5s ease-out;
+}
+.offer:hover {
+	box-shadow: 3px 5px 11px 1px rgb(0 0 255 / 2%);
+	transition: all .5s ease-out;
 }
 .offer__wrapper {
 	display: flex;
 	align-items: center;
 	padding: 0px 10px;
+	justify-content: space-between;
 }
 .offer__btn {
 	border-radius: 50px;
 	background-color: rgb(153, 153, 255, 0.5);
-	width: 120px;
 	padding: 9px;
 	border: none;
 	text-transform: uppercase;
@@ -44,58 +51,116 @@ input {outline:none;}
 	cursor: pointer;
 }
 .offer__input {
-	width: 200px;
 	height: 33px;
 	padding: 5px 10px;
 	font-size: 16px;
 	border-radius: 50px;
 	border: 1px solid rgb(153, 153, 255, 0.5);
+	transition: all .5s ease-out;
+}
+.offer__input:focus {
+	box-shadow: 3px 5px 11px 1px rgba(14, 14, 182, 0.2);
+	transition: all .5s ease-out;
 }
 h2 {
 	text-transform: uppercase;
 	font-size: 22px;
-	letter-spacing: 5px;
+	letter-spacing: 3px;
 	margin-bottom: 30px;
 }
 .todo-item {
-	width: 350px;
+	max-width: 350px;
 	padding: 15px;
 	margin: 0 auto;
 	background-color: #fff;
 	border-radius: 20px;
 	display: flex;
 	justify-content: space-between;
-	text-align: left;	
-	font-weight: 600;
+	text-align: left;
 	font-size: 18px;
 	letter-spacing: 1px;
 	align-items: center;
 	margin-bottom: 10px;
+	transition: all 1s ease;
+}
+.desc {
+	word-break:break-all;
+}
+.todo-item:hover {
+	box-shadow: 1px 1px 3px 2px rgb(14 14 182 / 14%);
+	transition: all 1s ease;
 }
 .todo-item.checked{
-	background-color: rgb(124, 27, 27);
-	width: 20px;
-	height: 20px;
+	background-color: rgb(0 95 255 / 23%);
 	opacity: 0.5;
+	transition: all .4s ease;
 }
-
 .todo-item.delition {
 	animation: opacity 1s ease-in-out;
 }
-
 .buttons {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	text-align: center;	
 }
-
 .buttons input {
 	cursor: pointer;
 }
-
+.del {
+	animation: opacity .5s ease-in-out;
+}
 .btn-delete {
 	width: 100px;
 	margin-left: 10px;
-	font-size: 14px;
+	font-size: 12px;
+}
+@keyframes opacity {
+	from {
+		transform: translateX(30px);
+		opacity: 1;
+		height: 25px;
+		font-size: 12px;
+		transition: all .5s ease-out;
+	}
+	to {
+		opacity: .5;
+		height: 10px;
+		font-size: 10px;
+		transform: translateX(80px);
+		transition: all .2s ease-out;
+	}
+	to {
+		opacity: 0;
+		height: 0px;
+		font-size: 1px;
+		transform: translateX(100px);
+		transition: all .2s ease-out;
+	}
+}
+@media (max-width: 400px) {
+	h1 {
+		font-size: 20px;
+	}
+	.offer {
+		border-radius: 20px;
+	}
+	.offer__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.offer__input {
+		margin-bottom: 10px;
+		font-size: 14px;
+		width: 94% !important
+	}
+	.offer__btn {
+		width: 100% !important
+	}
+	h2 {
+		font-size: 16px;
+	}
+	.todo-item {
+		
+	}
 }
